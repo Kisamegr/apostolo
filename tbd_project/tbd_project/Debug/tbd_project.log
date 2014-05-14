@@ -1,19 +1,21 @@
-﻿Build started 1/5/2014 11:31:38 μμ.
-     1>Project "V:\Visual Studio 13\Projects\apostolo\apostolo\tbd_project\tbd_project\tbd_project.vcxproj" on node 2 (Build target(s)).
+﻿Build started 14/05/2014 17:20:46.
+     1>Project "C:\Users\Sokratis\Documents\GitHub\apostolo\tbd_project\tbd_project\tbd_project.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         V:\Visual Studio 13\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
-         main.cpp
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\main.cpp(16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 v:\visual studio 13\vc\include\stdio.h(211) : see declaration of 'fopen'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\main.cpp(26): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 v:\visual studio 13\vc\include\string.h(112) : see declaration of 'strcpy'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\main.cpp(41): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 v:\visual studio 13\vc\include\stdio.h(211) : see declaration of 'fopen'
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt dbtproj.cpp
+         dbtproj.cpp
+     1>c:\users\sokratis\documents\github\apostolo\tbd_project\tbd_project\dbtproj.cpp(25): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+     1>c:\users\sokratis\documents\github\apostolo\tbd_project\tbd_project\dbtproj.cpp(36): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
+     1>c:\users\sokratis\documents\github\apostolo\tbd_project\tbd_project\dbtproj.cpp(52): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+     1>c:\users\sokratis\documents\github\apostolo\tbd_project\tbd_project\dbtproj.cpp(177): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : see declaration of 'strcpy'
        Link:
-         V:\Visual Studio 13\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"V:\Visual Studio 13\Projects\apostolo\apostolo\tbd_project\Debug\tbd_project.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"V:\Visual Studio 13\Projects\apostolo\apostolo\tbd_project\Debug\tbd_project.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"V:\Visual Studio 13\Projects\apostolo\apostolo\tbd_project\Debug\tbd_project.lib" /MACHINE:X86 Debug\main.obj
-         tbd_project.vcxproj -> V:\Visual Studio 13\Projects\apostolo\apostolo\tbd_project\Debug\tbd_project.exe
-     1>Done Building Project "V:\Visual Studio 13\Projects\apostolo\apostolo\tbd_project\tbd_project\tbd_project.vcxproj" (Build target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Sokratis\Documents\GitHub\apostolo\tbd_project\Debug\tbd_project.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Sokratis\Documents\GitHub\apostolo\tbd_project\Debug\tbd_project.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Sokratis\Documents\GitHub\apostolo\tbd_project\Debug\tbd_project.lib" /MACHINE:X86 Debug\dbtproj.obj
+         tbd_project.vcxproj -> C:\Users\Sokratis\Documents\GitHub\apostolo\tbd_project\Debug\tbd_project.exe
+     1>Done Building Project "C:\Users\Sokratis\Documents\GitHub\apostolo\tbd_project\tbd_project\tbd_project.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.42
+Time Elapsed 00:00:00.73
