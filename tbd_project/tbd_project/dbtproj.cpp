@@ -10,6 +10,11 @@ using namespace std;
 
 void ReadFile(FILE *infile, block_t block);
 void GenerateFile(FILE *outfile, int nblocks);
+int compareRecid (const void * a, const void * b);
+int compareNum(const void * a, const void * b);
+int compareStr (const void * a, const void * b);
+int compareNumStr (const void * a, const void * b);
+
 
 
 int main(int argc, char** argv) {
@@ -21,10 +26,10 @@ int main(int argc, char** argv) {
 	FILE *infile, *outfile;
 
 
-	// generate a file 
+	// generate a file
 	outfile = fopen("file.bin", "w");
 	//GenerateFile(outfile, nblocks);
-	
+
 	for (int b = 0; b<nblocks; ++b) { // for each block
 
 		block.blockid = b;
@@ -32,7 +37,7 @@ int main(int argc, char** argv) {
 
 			// prepare a record
 			record.recid = recid++;
-			record.num = rand() % 1000;
+			record.num = rand() % MAX_RECORD_NUM;
 			strcpy(record.str, "hello");   // put the same string to all records
 			record.valid = true;
 
@@ -47,7 +52,7 @@ int main(int argc, char** argv) {
 
 	fclose(outfile);
 
-	
+
 	//read file
 	infile = fopen("file.bin", "r");
 	ReadFile(infile, block);
@@ -71,28 +76,115 @@ int main(int argc, char** argv) {
 void MergeSort(char *infile, unsigned char field, block_t *buffer, unsigned int nmem_blocks, char *outfile, unsigned int *nsorted_segs, unsigned int *npasses, unsigned int *nios)
 {
 	// FIRST PART
-	/*
-	
+
+
+    block_t block;
+    int number_of_blocks;
 	// open file and print contents
 	FILE *input = fopen(infile, "r");
-	while (!feof(input)) { // while end-of-file has not been reached ... 
+	while (!feof(input)) { // while end-of-file has not been reached ...
 
 		fread(&block, 1, sizeof(block_t), input); // read the next block
-		nreserved = block.nreserved;
+		number_of_blocks = block.blockid+1;
+
+
+
 
 		// print block contents
-		for (int i = 0; i<nreserved; ++i) {
+		/*for (int i = 0; i<nreserved; ++i) {
 			printf("this is block id: %d, record id: %d, num: %d, str: %s\n",
 			block.blockid, block.entries[i].recid, block.entries[i].num, block.entries[i].str);
-		}
+		}*/
 	}
 
 	fclose(input);
 
-	for (int i = 0; i < 21; i++)
-	{
+	block_t blocks[number_of_blocks];
+	int c=0;
 
-	}*/
+	input = fopen(infile, "r");
+	while (!feof(input)) { // while end-of-file has not been reached ...
+
+		fread(&blocks[c++], 1, sizeof(block_t), input); // read the next block
+
+        switch (field)
+        {
+            case 0:
+                qsort(blocks[c].entries,blocks[c].nreserved,sizeof(record_t),compareRecid);
+                break;
+            case 1:
+                qsort(blocks[c].entries,blocks[c].nreserved,sizeof(record_t),compareNum);
+                break;
+            case 2:
+                qsort(blocks[c].entries,blocks[c].nreserved,sizeof(record_t),compareStr);
+                break;
+            case 3:
+                qsort(blocks[c].entries,blocks[c].nreserved,sizeof(record_t),compareNumStr);
+                break;
+
+        }
+
+
+
+		// print block contents
+		/*for (int i = 0; i<nreserved; ++i) {
+			printf("this is block id: %d, record id: %d, num: %d, str: %s\n",
+			block.blockid, block.entries[i].recid, block.entries[i].num, block.entries[i].str);
+		}*/
+	}
+
+	fclose(input);
+
+
+    int max_blocks = min(number_of_blocks,nmem_blocks-1);
+
+    int current_record_index[max_blocks];
+    int current_block = 0;
+
+    int min_record_recid = MAX_RECORDS_PER_BLOCK;
+    int min_record_num = MAX_RECORD_NUM;
+
+
+    int min_record_index = -1;
+
+    for(int i=0 ; i<max_blocks ; i++)
+    {
+        current_record_index[i] = 0;
+        buffer[i] = blocks[current_block++];
+
+    }
+
+
+
+
+    for(int i=0 ; i<number_of_blocks ; i+=max_blocks)
+    {
+       min_record = -1;
+
+       for(int k = 0; k<max_blocks ; k++)
+       {
+
+        switch (field)
+        {
+            case 0:
+                if(buffer[k].entries[current_record_index[k]].recid < min_record_recid )
+                    min_record_index = k;
+                break;
+            case 1:
+                if(buffer[k].entries[current_record_index[k]].)
+                break;
+            case 2:
+                if(buffer[k].entries[current_record_index[k]].)
+                break;
+            case 3:
+                if(buffer[k].entries[current_record_index[k]].)
+                break;
+
+        }
+       }
+
+    }
+
 	//read the input file
 	//Read each block one at a time
 	//When a block is read, put it in the buffer
@@ -106,12 +198,12 @@ void MergeSort(char *infile, unsigned char field, block_t *buffer, unsigned int 
 	// SECOND PART
 
 	// Put buffer_size-1 blocks in the buffer, and compare their record's values
-	// Put the result in the last buffer slot 
+	// Put the result in the last buffer slot
 	// When the last slot is full, save the new block to the ram and continue the comparing
 	// Do this until there are not blocks in the buffer
 	// Then put the next batch and do the same
 	// When all the old blocks are merged, do the same with the new bigger-merged blocks, until you got the final merged block
-	
+
 
 }
 
@@ -128,10 +220,10 @@ nios: number of IOs performed (this should be set by you)
 void EliminateDuplicates(char *infile, unsigned char field, block_t *buffer, unsigned int nmem_blocks, char *outfile, unsigned int *nunique, unsigned int *nios)
 {
 	// FIRST PART
-	
+
 	// Do a mergesort to the file, in order to the the sorted records
 
-	
+
 	// SECOND PART
 
 	// Pass the sorted file and delete the duplicates
@@ -154,14 +246,14 @@ void MergeJoin(char *infile1, char *infile2, unsigned char field, block_t *buffe
 	// Read the 2 files
 	// Merge the files into 1, and apply merge sort
 	// Pass the new sorted file and find the duplicates
-	// Save each record that 
+	// Save each record that
 
 }
 
 
 void GenerateFile(FILE *outfile, int nblocks)
 {
-	// generate a file 
+	// generate a file
 	block_t block;
 	record_t record;
 	unsigned int recid = 0;
@@ -198,7 +290,7 @@ void ReadFile(FILE *infile, block_t block)
 {
 	// open file and print contents
 	int nreserved;
-	while (!feof(infile)) { // while end-of-file has not been reached ... 
+	while (!feof(infile)) { // while end-of-file has not been reached ...
 
 		fread(&block, 1, sizeof(block_t), infile); // read the next block
 		nreserved = block.nreserved;
@@ -213,3 +305,27 @@ void ReadFile(FILE *infile, block_t block)
 	fclose(infile);
 }
 
+
+
+int compareRecid (const void * a, const void * b)
+{
+    return ( *(record_t*)a->recid - *(record_t*)b->recid );
+}
+
+int compareNum (const void * a, const void * b)
+{
+    return ( *(record_t*)a->num - *(record_t*)b->num );
+}
+
+int compareStr (const void * a, const void * b)
+{
+    return strcmp( *(record_t*)a->str, *(record_t*)b->str );
+}
+
+int compareNumStr (const void * a, const void * b)
+{
+    if(compareNum(a,b) != 0)
+        return compareNum(a,b);
+
+    return compareStr(a,b);
+}
