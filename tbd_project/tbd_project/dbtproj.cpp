@@ -1,4 +1,4 @@
-#include "dbtproj.h"
+#include "tbdproj.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <cstring>
@@ -18,34 +18,32 @@ int compareNumStr(const void * a, const void * b);
 int min(int a, int b);
 
 
-int main() {
-	
-	int nblocks = 3;	// number of blocks in the file
+int main(int argc, char** argv) {
 
+	int nblocks = 3;	// number of blocks in the file
 	record_t record;
 	block_t block;
-
 	unsigned int recid = 0;
 	FILE *infile, *outfile;
 
-	//outfile = fopen("file.bin", "w");
+	outfile = fopen("file.bin", "w");
 
 	// generate a file
-	//GenerateFile(outfile, nblocks);
+	GenerateFile(outfile, nblocks);
 
 
 
 	//read file
-	infile = fopen("file.bin", "r");
-	ReadFile(infile, block);
+	//infile = fopen("file.bin", "r");
+	//ReadFile(infile, block);
 
 	block_t *buffer = new block_t[100];
 
-	//MergeSort("file.bin", 0, buffer, 100);
+	char name[9] = "file.bin";
 
-	delete buffer;
+	MergeSort("file.bin", 0, buffer, 100);
 
-	system("pause");
+
 	return 0;
 }
 
@@ -62,7 +60,7 @@ nios: number of IOs performed (this should be set by you)
 
 */
 //void MergeSort(char *infile, unsigned char field, block_t *buffer, unsigned int nmem_blocks, char *outfile, unsigned int *nsorted_segs, unsigned int *npasses, unsigned int *nios)
-void MergeSort(char *infile, unsigned char field, block_t *buffer, unsigned int nmem_blocks)
+void MergeSort(char *infile, unsigned int field, block_t *buffer, unsigned int nmem_blocks)
 
 {
 	block_t block;
@@ -86,7 +84,7 @@ void MergeSort(char *infile, unsigned char field, block_t *buffer, unsigned int 
 
 	fclose(input);
 
-	block_t *blocks = new block_t[number_of_blocks];
+	block_t blocks[number_of_blocks];
 	int total = 0;
 	int p = 0;
 	FILE *segments_file;
@@ -217,7 +215,7 @@ void MergeSort(char *infile, unsigned char field, block_t *buffer, unsigned int 
 			segment_t read_segment;
 
 			// The pointer to the current record in each block
-			int *current_record_index = new int[max_blocks_in_buffer];
+			int current_record_index[max_blocks_in_buffer];
 			int current_block_in_segment_index[MAX_BLOCKS_IN_SEGMENT];
 			int current_block = 0;
 			int output_record_index = 0;
@@ -369,10 +367,9 @@ void MergeSort(char *infile, unsigned char field, block_t *buffer, unsigned int 
 
 			current_segment_batch++;
 
-			delete current_record_index;
 
 		}
-		
+
 		second_segment_file = !second_segment_file;
 
 	}
@@ -393,7 +390,7 @@ void MergeSort(char *infile, unsigned char field, block_t *buffer, unsigned int 
 	// Then put the next batch and do the same
 	// When all the old blocks are merged, do the same with the new bigger-merged blocks, until you got the final merged block
 
-	delete blocks;
+
 
 	FILE *output_file;
 
@@ -527,7 +524,6 @@ void GenerateFile(FILE *outfile, int nblocks)
 			record.valid = true;
 
 			memcpy(&block.entries[r], &record, sizeof(record_t)); // copy record to block
-			//block.entries[r] = record;
 		}
 
 		block.nreserved = MAX_RECORDS_PER_BLOCK;

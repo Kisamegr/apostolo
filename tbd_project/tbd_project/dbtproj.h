@@ -63,7 +63,7 @@ nios: number of IOs performed (this should be set by you)
 ----------------------------------------------------------------------------------------------------------------------
 */
 //void MergeSort(char *infile, unsigned char field, block_t *buffer, unsigned int nmem_blocks, char *outfile, unsigned int *nsorted_segs, unsigned int *npasses, unsigned int *nios);
-void MergeSort(char *infile, unsigned char field, block_t *buffer, unsigned int nmem_blocks);
+void MergeSort(char *infile, unsigned int field, block_t *buffer, unsigned int nmem_blocks);
 
 
 /* ----------------------------------------------------------------------------------------------------------------------
