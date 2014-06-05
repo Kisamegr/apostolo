@@ -19,29 +19,33 @@ int min(int a, int b);
 
 
 int main() {
-
+	
 	int nblocks = 3;	// number of blocks in the file
+
 	record_t record;
 	block_t block;
+
 	unsigned int recid = 0;
 	FILE *infile, *outfile;
 
-	outfile = fopen("file.bin", "w");
+	//outfile = fopen("file.bin", "w");
 
 	// generate a file
-	GenerateFile(outfile, nblocks);
+	//GenerateFile(outfile, nblocks);
 
 
 
 	//read file
-	//infile = fopen("file.bin", "r");
-	//ReadFile(infile, block);
+	infile = fopen("file.bin", "r");
+	ReadFile(infile, block);
 
-	block_t buffer[100];
+	block_t *buffer = new block_t[100];
 
-	MergeSort("file.bin", 0, buffer, 100);
+	//MergeSort("file.bin", 0, buffer, 100);
 
+	delete buffer;
 
+	system("pause");
 	return 0;
 }
 
@@ -523,6 +527,7 @@ void GenerateFile(FILE *outfile, int nblocks)
 			record.valid = true;
 
 			memcpy(&block.entries[r], &record, sizeof(record_t)); // copy record to block
+			//block.entries[r] = record;
 		}
 
 		block.nreserved = MAX_RECORDS_PER_BLOCK;

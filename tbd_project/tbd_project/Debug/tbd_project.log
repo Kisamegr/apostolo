@@ -1,49 +1,48 @@
-﻿Build started 5/6/2014 11:57:36 μμ.
+﻿Build started 6/6/2014 12:08:55 πμ.
      1>Project "V:\Visual Studio 13\Projects\apostolo\apostolo\tbd_project\tbd_project\tbd_project.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          V:\Visual Studio 13\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt dbtproj.cpp
          dbtproj.cpp
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(29): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(39): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\stdio.h(211) : see declaration of 'fopen'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(24): warning C4101: 'record' : unreferenced local variable
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(27): warning C4101: 'infile' : unreferenced local variable
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(25): warning C4101: 'block' : unreferenced local variable
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(70): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(29): warning C4101: 'outfile' : unreferenced local variable
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(25): warning C4101: 'record' : unreferenced local variable
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(74): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\stdio.h(211) : see declaration of 'fopen'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(91): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(95): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\stdio.h(211) : see declaration of 'fopen'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(92): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(96): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\stdio.h(211) : see declaration of 'fopen'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(105): warning C4018: '<' : signed/unsigned mismatch
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(142): warning C4018: '<' : signed/unsigned mismatch
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(232): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(109): warning C4018: '<' : signed/unsigned mismatch
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(146): warning C4018: '<' : signed/unsigned mismatch
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(236): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\stdio.h(211) : see declaration of 'fopen'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(234): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(238): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\stdio.h(211) : see declaration of 'fopen'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(268): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(272): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\string.h(112) : see declaration of 'strcpy'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(275): warning C4018: '<' : signed/unsigned mismatch
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(283): warning C4018: '<' : signed/unsigned mismatch
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(295): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(279): warning C4018: '<' : signed/unsigned mismatch
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(287): warning C4018: '<' : signed/unsigned mismatch
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(299): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\string.h(112) : see declaration of 'strcpy'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(300): warning C4018: '<' : signed/unsigned mismatch
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(304): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(304): warning C4018: '<' : signed/unsigned mismatch
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(308): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\string.h(112) : see declaration of 'strcpy'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(310): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(314): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\string.h(112) : see declaration of 'strcpy'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(336): warning C4018: '>' : signed/unsigned mismatch
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(355): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(340): warning C4018: '>' : signed/unsigned mismatch
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(359): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\stdio.h(211) : see declaration of 'fopen'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(357): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(361): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\stdio.h(211) : see declaration of 'fopen'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(397): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(401): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\stdio.h(211) : see declaration of 'fopen'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(399): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(403): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\stdio.h(211) : see declaration of 'fopen'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(403): warning C4018: '<' : signed/unsigned mismatch
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(522): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(407): warning C4018: '<' : signed/unsigned mismatch
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(526): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  v:\visual studio 13\vc\include\string.h(112) : see declaration of 'strcpy'
-     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(268): warning C4700: uninitialized local variable 'min_record_string' used
+     1>v:\visual studio 13\projects\apostolo\apostolo\tbd_project\tbd_project\dbtproj.cpp(272): warning C4700: uninitialized local variable 'min_record_string' used
        Link:
          V:\Visual Studio 13\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"V:\Visual Studio 13\Projects\apostolo\apostolo\tbd_project\Debug\tbd_project.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"V:\Visual Studio 13\Projects\apostolo\apostolo\tbd_project\Debug\tbd_project.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"V:\Visual Studio 13\Projects\apostolo\apostolo\tbd_project\Debug\tbd_project.lib" /MACHINE:X86 Debug\dbtproj.obj
          tbd_project.vcxproj -> V:\Visual Studio 13\Projects\apostolo\apostolo\tbd_project\Debug\tbd_project.exe
@@ -51,4 +50,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.80
+Time Elapsed 00:00:00.61
