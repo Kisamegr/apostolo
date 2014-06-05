@@ -15,6 +15,10 @@
 
 #define STR_LENGTH 120
 #define MAX_RECORDS_PER_BLOCK 100
+#define MAX_RECORD_NUM 1000
+#define MAX_BLOCKS_IN_SEGMENT 1000
+#define SEGMENTS_FILE "segments.bin"
+#define NEW_SEGMENTS_FILE "new_segments.bin"
 
 // This is the definition of a record of the input file. Contains three fields, recid, num and str
 typedef struct {
@@ -36,6 +40,13 @@ typedef struct {
 	unsigned int dummy;
 } block_t;
 
+typedef struct {
+	unsigned int segment_id;
+	unsigned int nblocks; // how many blocks
+	block_t blocks[MAX_BLOCKS_IN_SEGMENT]; // array of records
+} segment_t;
+
+
 
 // Functions that must be implemented in your code
 
@@ -51,7 +62,8 @@ npasses: number of passes required for sorting (this should be set by you)
 nios: number of IOs performed (this should be set by you)
 ----------------------------------------------------------------------------------------------------------------------
 */
-void MergeSort(char *infile, unsigned char field, block_t *buffer, unsigned int nmem_blocks, char *outfile, unsigned int *nsorted_segs, unsigned int *npasses, unsigned int *nios);
+//void MergeSort(char *infile, unsigned char field, block_t *buffer, unsigned int nmem_blocks, char *outfile, unsigned int *nsorted_segs, unsigned int *npasses, unsigned int *nios);
+void MergeSort(char *infile, unsigned char field, block_t *buffer, unsigned int nmem_blocks);
 
 
 /* ----------------------------------------------------------------------------------------------------------------------
